@@ -10,6 +10,7 @@ import org.springframework.stereotype.Component;
 public class InjectedByContsructorService {
     private HelloWorldService helloWorldService;
 
+    //It automatically finds the helloWorldImpl implementation class for helloWorldService and inject it
     @Autowired
     public InjectedByContsructorService(HelloWorldService helloWorldService) {
         this.helloWorldService = helloWorldService;

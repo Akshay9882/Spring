@@ -11,12 +11,13 @@ public class SetterBasedService {
 
     private HelloWorldService helloWorldService;
 
+    //It automatically finds the helloWorldImpl implementation class for helloWorldService and inject it
     @Autowired
     public void setHelloWorldService(HelloWorldService helloWorldService) {
         this.helloWorldService = helloWorldService;
     }
 
-    public void getMessage(){
+    public void getMessage() {
         helloWorldService.sayHello();
     }
 }
