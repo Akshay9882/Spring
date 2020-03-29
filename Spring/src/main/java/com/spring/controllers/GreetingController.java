@@ -8,7 +8,7 @@ import org.springframework.stereotype.Controller;
 @Controller
 public class GreetingController {
     private HelloWorldService helloWorldService;
-    //Autowired is managed at runtime using active profiles as there are two classes implementing HelloWorldService
+    //Autowired is managed by Configuration and Factory Beans
     @Autowired
     public void setHelloWorldService(HelloWorldService helloWorldService) {
         this.helloWorldService = helloWorldService;
