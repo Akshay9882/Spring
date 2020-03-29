@@ -1,2 +1,14 @@
-Difference between Configuration and FactoryBeans
-Implementing factorybeans as there are multiple classes here... need review
+**Advanced Autowiring**
+
+**AutoWiring by Type**
+
+-   The Bean for specific types are searched. If more than one bean is found,
+    then to resolve ambiguity the bean with higher preference need to be
+    annotated with \@Primary.
+
+-   \@Profile and \@Primary are mutually exclusive.
+
+**AutoWiring by Name**
+
+The default bean name is the name of method; a custom name can also be specified
+using Qualifier name.

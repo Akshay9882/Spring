@@ -7,7 +7,6 @@ import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.ComponentScan;
 
 //ComponentScan-will scan for all components in given path
-
 @SpringBootApplication
 @ComponentScan("com.spring")
 public class DependencyInjectionApplication {
