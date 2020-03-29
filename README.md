@@ -8,6 +8,8 @@
 
 -   \@Profile and \@Primary are mutually exclusive.
 
+- https://stackoverflow.com/questions/60915199/understanding-primary-annotation-in-profile
+
 **AutoWiring by Name**
 
 The default bean name is the name of method; a custom name can also be specified
