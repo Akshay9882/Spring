@@ -1,1 +1,2 @@
-When there are multiple implementations of a single interface they can be autowired using the @profile annotation at runtime.
+- When there are multiple implementations of a single interface they can be autowired using the @profile annotation at runtime.
+- The profiles are specified in application.properties file located at src/main/resources
