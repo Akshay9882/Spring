@@ -9,10 +9,7 @@ import org.springframework.stereotype.Controller;
 public class GreetingController {
 
     private HelloWorldService helloWorldService;
-
-    private HelloWorldService helloWorldServiceGerman;
-
-    private HelloWorldService helloWorldServiceFrench;
+    private HelloWorldService helloWorldServiceSpanish;
 
     @Autowired
     public void setHelloWorldService(HelloWorldService helloWorldService) {
@@ -20,26 +17,15 @@ public class GreetingController {
     }
 
     @Autowired
-    @Qualifier("helloWorldServiceGerman")
-    public void setHelloWorldServiceGerman(HelloWorldService helloWorldServiceGerman) {
-        this.helloWorldServiceGerman = helloWorldServiceGerman;
+    @Qualifier("spanish")
+    public void setHelloWorldServiceFrench(HelloWorldService helloWorldServiceSpanish) {
+        this.helloWorldServiceSpanish = helloWorldServiceSpanish;
     }
 
-    @Autowired
-    @Qualifier("french")
-    public void setHelloWorldServiceFrench(HelloWorldService helloWorldServiceFrench) {
-        this.helloWorldServiceFrench = helloWorldServiceFrench;
-    }
-
-    public String sayHello(){
-
+    public String sayHello() {
         String greeting = helloWorldService.getGreeting();
-
+        System.out.println(helloWorldServiceSpanish.getGreeting());
         System.out.println(greeting);
-        System.out.println(helloWorldServiceGerman.getGreeting());
-        System.out.println(helloWorldServiceFrench.getGreeting());
-
         return greeting;
     }
-
 }
